@@ -6,12 +6,11 @@ int main()
 
     printf("Enter a number \n ");
     scanf("%d", &a);
-
     for (int i = 1; i <= a; i++)
     {
         printf("%d\t", sum);
-        sum = b + c;
         b = c;
         c = sum;
+        sum = b + c;
     }
 }

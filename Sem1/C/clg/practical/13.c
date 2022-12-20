@@ -1,18 +1,19 @@
 #include <stdio.h>
 int main()
 {
-printf("Krishant Chauhan MCA A 29\n");    int amount;
+    printf("Krishant Chauhan MCA A 29\n");
+    int amount;
     int n1, n2, n5, n10, n20, n50, n100, n500;
     n1 = n2 = n5 = n10 = n20 = n50 = n100 = n500 = 0;
-    printf("Enter  total Amount to find the notes : ");
+    printf("Enter  total Amount to find the notes : \n");
     scanf("%d", &amount);
     switch (amount >= 500)
     {
     case 1:
         n500 = amount / 500;
+        printf(" %d", n500);
         amount -= n500 * 500;
-
-        // break;
+        printf(" %d", n500*500);
     }
     switch (amount >= 100)
     {
