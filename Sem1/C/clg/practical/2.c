@@ -3,12 +3,13 @@
 int main()
 {
     int a;
+    printf("Krishant Chauhan MCA A 29\n");
     printf("Enter a number \n ");
     scanf("%d", &a);
-
-    while (a != 0)
+    int sum = 0;
+    for (int i = 0; i <= a; i += 2)
     {
-        printf("%d \n", a);
-        a--;
+        sum += i;
     }
+    printf("%d \n", sum);
 }

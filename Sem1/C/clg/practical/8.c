@@ -1,17 +1,17 @@
 #include <stdio.h>
-
 int main()
 {
-    int a;
+    int a, sum = 0, b = 0, c = 1;
+    printf("Krishant Chauhan MCA A 29\n");
+
     printf("Enter a number \n ");
     scanf("%d", &a);
-    int sum = 0;
-    for (int i = 0; i <= a; i++)
+
+    for (int i = 1; i <= a; i++)
     {
-        if (i % 2 != 0)
-        {
-            sum += i;
-        }
+        printf("%d\t", sum);
+        sum = b + c;
+        b = c;
+        c = sum;
     }
-    printf("%d \n", sum);
 }

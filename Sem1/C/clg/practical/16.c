@@ -1,14 +1,12 @@
 #include <stdio.h>
-int main()
+void main()
 {
-    int a;
-    printf("Enter a number \n ");
-    scanf("%d", &a);
-    int sum = 0, temp;
-    for (a; a > 0; a /= 10)
-    {
-        temp = a % 10;
-        sum = (sum * 10) + temp;
-    }
-    printf("%d", sum);
+    printf("Krishant Chauhan MCA A 29\n");
+    printf("Enter the Number: ");
+    int n, pos;
+    scanf("%d", &n);
+    printf("Enter the Position: ");
+    scanf("%d", &pos);
+    int p = n ^ (1 << (pos - 1));
+    printf("%d after toggling bit of %d position: %d \n", n, pos, p);
 }

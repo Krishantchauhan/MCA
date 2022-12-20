@@ -1,14 +1,20 @@
 #include <stdio.h>
-
 int main()
 {
-    int a;
-    printf("Enter a number \n ");
-    scanf("%d", &a);
-    int count = 0;
-    for (a; a > 0; a /= 10)
+    char a;
+    printf("Krishant Chauhan MCA A 29\n");
+
+    printf("Enter char \n ");
+    scanf("%c", &a);
+
+    if (a >= 65 && a <= 97)
     {
-        count++;
+        a = a + 32;
     }
-    printf("%d \n", count);
+    else
+    {
+        a = a - 32;
+    }
+
+    printf("%c\n", a);
 }

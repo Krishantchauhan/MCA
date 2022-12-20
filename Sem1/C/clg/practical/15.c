@@ -1,14 +1,18 @@
 #include <stdio.h>
 int main()
 {
-    int a;
-    printf("Enter a number \n ");
-    scanf("%d", &a);
-    int sum = 1, temp;
-    for (a; a > 0; a /= 10)
+    int decimal_num, c, result;
+    printf("Krishant Chauhan MCA A 29\n");
+    printf("Enter an decimal number \n");
+    scanf("%d", &decimal_num);
+    for (c = 31; c >= 0; c--)
     {
-        temp = a % 10;
-        sum *= temp;
+        result = decimal_num >> c;
+        if (result & 1)
+            printf("1");
+        else
+            printf("0");
     }
-    printf("%d", sum);
+    printf("\n");
+    return 0;
 }

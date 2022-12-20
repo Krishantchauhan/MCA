@@ -2,11 +2,15 @@
 
 int main()
 {
-    char a = 97;
+    int a;
+    printf("Krishant Chauhan MCA A 29\n");
 
-    while (a != 123)
+    printf("Enter a number \n ");
+    scanf("%d", &a);
+    int count = 0;
+    for (a; a > 0; a /= 10)
     {
-        printf("%c \n", a);
-        a++;
+        count++;
     }
+    printf("Count = %d \n", count);
 }

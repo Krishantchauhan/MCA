@@ -1,17 +1,25 @@
 #include <stdio.h>
 int main()
 {
-    int a;
-    printf("Enter a number \n ");
-    scanf("%d", &a);
-    int sum = 0, temp, check = a;
-    for (a; a > 0; a /= 10)
+  printf("Krishant Chauhan MCA A 29\n");
+    int num;
+    int tempNum, flag;
+    printf("Enter an integer number: ");
+    scanf("%d", &num);
+    tempNum = num;
+    flag = 0;
+    while (tempNum != 1)
     {
-        temp = a % 10;
-        sum = (sum * 10) + temp;
+        if (tempNum % 2 != 0)
+        {
+            flag = 1;
+            break;
+        }
+        tempNum = tempNum / 2;
     }
-    if (check == sum)
-        printf("Number is palindrome");
+    if (flag == 0)
+        printf("%d is a number that is the power of 2.", num);
     else
-        printf("Number is not palindrome");
+        printf("%d is not the power of 2.", num);
+    return 0;
 }

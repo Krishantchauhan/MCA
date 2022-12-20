@@ -2,6 +2,7 @@
 
 int main()
 {
+  printf("Krishant Chauhan MCA A 29\n");
     int count = 65;
     for (int i = 1; i < 8; i++)
     {
