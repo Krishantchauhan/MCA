@@ -1,0 +1,15 @@
+Q1write a shell script to print "hello world"
+Q2write a shell script to read your name and print  
+Q3write a shell script to read 2 numbers and print
+Q4write a shell script to add 2 variables
+Q5wwrite a shell to perform arthmatic calc
+
+1:whether a number is +ve or -ve
+(Hint: if [$n1 -lt 0]
+elif [$n1 -gt 0]
+then echo "+ve"
+else echo "enter correct number"
+fi)
+
+2:greater of 2 number
+3:greter of 3 number

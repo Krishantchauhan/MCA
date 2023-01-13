@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Numeber Guessing</title>
+  </head>
+  <body>
+    <h1>Guess Number</h1>
+    <p>Enter random number between 1 - 10.</p>
+    <form>
+      <label for="guessField">Enter a guess Number: </label>
+      <input type="text" id="guess" /><br /><br />
+      <input type="submit" value="Check Your Guess" id="submit" />
+    </form>
+    <script>
+      let num = Math.floor(Math.random() * 10) + 1;
+      document.getElementById("submit").onclick = function () {
+        let guess = document.getElementById("guess").value;
+        if (guess == num) {
+          alert("Welcome to JavaScript");
+        } else {
+          alert("Wrong Matched The NUmber is " + num);
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      Name: <input type="text" /> <br />
+      Age: <input type="number" max="60" /> <br />
+      Email: <input type="email" /> <br />
+      Phone no: <input type="tel" /> <br />
+      Gender: <br />
+      <input type="radio" name="Gender" value="male" />
+      <label for="Gender">Male</label><br />
+      <input type="radio" name="Gender" value="female" />
+      <label for="Gender">Female</label><br />
+      <input type="checkbox" id="chk" onclick="submitable()" /> Agree to T&C<br />
+      <button type="submit" id="s" style="display: none">Submit</button>
+    </form>
+  </body>
+  <script>
+    function submitable() {
+      let Inputs = document.querySelectorAll("input");
+      let ct = Inputs.length;
+      for (let i = 0; i <= Inputs.length; i++) {
+        if (Inputs[i].value != "" || Inputs[i].checked) {
+          console.log("if True");
+          if (--ct == 0) document.getElementById("s").style.display = "block";
+        } else {
+          console.log("if false");
+          Inputs[i].style = "border: 1px solid red";
+        }
+      }
+    }
+  </script>
+</html>
