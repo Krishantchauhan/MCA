@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#btnAddDivClass").click(function () {
+          $("#myDiv").addClass("yellowDiv");
+        });
+
+        $("#btnAddPClass").click(function () {
+          $("p").addClass("impPrg");
+        });
+      });
+    </script>
+    <style>
+      .yellowDiv {
+        background-color: yellow;
+        margin: 10px 0 0 0;
+        height: 50px;
+      }
+
+      .impPrg {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Demo: jQuery addClass() method</h1>
+    <button id="btnAddDivClass">Add div class</button>
+    <button id="btnAddPClass">Add p class</button>
+
+    <div id="myDiv">
+      <p>This is first paragraph.</p>
+    </div>
+    <div>
+      <p>This is second paragraph.</p>
+    </div>
+    <div>
+      <p>This is third paragraph.</p>
+    </div>
+  </body>
+</html>
