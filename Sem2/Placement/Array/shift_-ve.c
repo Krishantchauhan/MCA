@@ -5,7 +5,7 @@ int main()
     int a[] = {-1, 6, -8, 9, -40, 20};
     int size = sizeof(a) / sizeof(a[0]);
 
-    for (int i = size; i >= 0; i--)
+    for (int i = size-1; i >= 0; i--)
     {
         if (a[i] < 0)
         {
