@@ -1,6 +1,4 @@
-// void swap(int *i, int *count)
-{
-    int temp = *i;
-    *i = *count;
-    *count = temp;
-}
+    // for (int i = 0; i < p; i++)
+    // {
+    //     // printf("%d ", inter[i]);
+    // }
