@@ -6,12 +6,12 @@ int main()
     {
         for (int j = 1; j < 6; j++)
         {
-            if (j>i ||j==i)
+            if (j <= i)
             {
                 printf("*");
-            }else
-            printf(" ");
-            
+            }
+            else
+                printf(" ");
         }
         printf("\n");
     }

@@ -17,7 +17,7 @@
 //         printf("%d  ", a[i]);
 // }
 
-// rotate n times 
+// rotate n times
 int main()
 {
     int a[] = {12, 34, 10, 6, 40};

@@ -7,20 +7,39 @@ int main()
     int s1 = sizeof(a) / sizeof(a[0]);
     int s2 = sizeof(b) / sizeof(b[0]);
 
-    printf("\nINtersection \n");
-    for (int i = 0; i < s1; i++)
-    {
-        for (int j = 0; j < s2; j++)
-        {
-            if (a[i] == b[j])
-                printf("%d ", b[j]);
-        }
-    }
+    // printf("\nINtersection \n");
+    // for (int i = 0; i < s1; i++)
+    // {
+    //     for (int j = 0; j < s2; j++)
+    //     {
+    //         if (a[i] == b[j])
+    //             printf("%d ", b[j]);
+    //     }
+    // }
 
-    printf("\nUNION \n");
+    // printf("\nUNION \n");
 
+    // for (int i = 0; i < s1; i++)
+    //     printf("%d ", a[i]);
+    // int flag = 0;
+    // for (int i = 0; i < s1; i++)
+    // {
+    //     flag = 0;
+    //     for (int j = 0; j < s2; j++)
+    //     {
+    //         if (b[i] == a[j])
+    //             flag = 1;
+    //     }
+    //     if (flag == 0)
+    //         printf("%d ", b[i]);
+    // }
+
+
+    // By using another array
+    int c[s1 + s2], p = 0;
     for (int i = 0; i < s1; i++)
-        printf("%d ", a[i]);
+        c[p++] = a[i];
+
     int flag = 0;
     for (int i = 0; i < s1; i++)
     {
@@ -31,6 +50,9 @@ int main()
                 flag = 1;
         }
         if (flag == 0)
-            printf("%d ", b[i]);
+            c[p++] = b[i];
     }
+
+    for (int i = 0; i < p; i++)
+        printf("%d ", c[i]);
 }
