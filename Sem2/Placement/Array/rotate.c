@@ -20,10 +20,11 @@
 // rotate n times
 int main()
 {
-    int a[] = {12, 34, 10, 6, 40};
+    // int a[] = {12, 34, 10, 6, 40};
+    int a[] = {1, 2, 3, 4, 5};
     int n = sizeof(a) / sizeof(a[0]);
 
-    int k = 2;
+    int k = 4;
     while (k--)
     {
         int temp = a[0];
