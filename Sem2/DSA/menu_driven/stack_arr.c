@@ -1,5 +1,5 @@
 #include <stdio.h>
-int top, max, a[100], s, e, ch;
+int top, a[100], s, e, ch;
 void Push(void);
 void pop(void);
 void peek();
