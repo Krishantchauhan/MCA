@@ -10,9 +10,7 @@ class test
 			double per;
 			for(int i=0;i<args.length; i++)
 			{
-				
 				sum=sum + Integer.parseInt(args[i]);
-
 			}
 			per =(sum/400)*100;
 			System.out.println("Percentage of 4 subject is : "+per);

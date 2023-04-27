@@ -1,30 +1,10 @@
 #include <stdio.h>
 #define max 5
-int q[max];
+int q[10];
 int front = -1;
 int rear = -1;
 int x;
-void main()
-{
-    int ch;
-    do
-    {
-        printf("\n1.enqueue\n2.dequeue\n3.display\nEnter the choice \n");
-        scanf("%d", &ch);
-        switch (ch)
-        {
-        case (1):
-            enqueue();
-            break;
-        case (2):
-            dequeue();
-            break;
-        case (3):
-            display();
-            break;
-        }
-    } while (ch < 4);
-}
+
 void enqueue()
 {
     printf("Enter the data \n");
@@ -38,6 +18,10 @@ void enqueue()
     {
         front = rear = 0;
         q[rear] = x;
+    }
+    else if (front > 0)
+    {
+        max++;
     }
     else
     {
@@ -76,4 +60,26 @@ void display()
             printf("%d\n", q[i]);
         }
     }
+}
+
+void main()
+{
+    int ch;
+    do
+    {
+        printf("\n1.enqueue\n2.dequeue\n3.display\nEnter the choice \n");
+        scanf("%d", &ch);
+        switch (ch)
+        {
+        case (1):
+            enqueue();
+            break;
+        case (2):
+            dequeue();
+            break;
+        case (3):
+            display();
+            break;
+        }
+    } while (ch < 4);
 }

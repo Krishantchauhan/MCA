@@ -12,7 +12,6 @@ class person {
     String getname() {
         return name;
     }
-
 }
 
 class Test {

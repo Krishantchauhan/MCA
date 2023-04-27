@@ -5,11 +5,9 @@ class st {
     st(int rollno, String name) {
         this.rollno = rollno;
         this.name = name;
-
     }
 
     void show() {
-
         System.out.println("Name : " + name + " Rollno : " + rollno);
     }
 }

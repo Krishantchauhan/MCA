@@ -15,13 +15,16 @@ public class Search {
 
         System.out.println("Enter the element to Search ");
         key = sc.nextInt();
-
+        int count=0;
         for (int i = 0; i < n; i++) {
             if (a[i] == key) {
+                count=1;
                 System.out.println(key + " is Present at Position " + (i + 1));
                 break;
             }
         }
+        if(count==0)
+        System.out.println("Not found");
 
     }
 }

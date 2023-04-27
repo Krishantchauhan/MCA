@@ -78,28 +78,7 @@ void main()
         }
     }
 }
-void append()
-{
-    node *newnode;
-    newnode = (node *)malloc(sizeof(node));
-    printf("Enter the data of node :\n");
-    scanf("%d", &newnode->data);
-    newnode->next = 0;
-    if (head == 0)
-    {
-        head = newnode;
-    }
-    else
-    {
-        node *temp;
-        temp = head;
-        while (temp->next != 0)
-        {
-            temp = temp->next;
-        }
-        temp->next = newnode;
-    }
-}
+
 void display()
 {
     node *temp;
@@ -129,6 +108,28 @@ int count()
     }
     printf("Total Number of Nodes are : %d\n", count);
     return count;
+}
+void append()
+{
+    node *newnode;
+    newnode = (node *)malloc(sizeof(node));
+    printf("Enter the data of node :\n");
+    scanf("%d", &newnode->data);
+    newnode->next = 0;
+    if (head == 0)
+    {
+        head = newnode;
+    }
+    else
+    {
+        node *temp;
+        temp = head;
+        while (temp->next != 0)
+        {
+            temp = temp->next;
+        }
+        temp->next = newnode;
+    }
 }
 void insert_beg(int data)
 {

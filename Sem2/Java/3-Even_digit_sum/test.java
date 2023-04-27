@@ -7,10 +7,9 @@ class test {
         int count = 0;
         while (num > 0) {
             rem = num % 10;
-            if (count % 2 == 0)
+            if (rem % 2 == 0)
                 sum += rem;
             num = num / 10;
-            count++;
         }
         System.out.println("Sum of even digits is " + sum);
     }
