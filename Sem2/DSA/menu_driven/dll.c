@@ -116,9 +116,14 @@ void ins_beg(int a)
     newnode->data = a;
     newnode->prev = 0;
     newnode->next = 0;
-    head->prev = newnode;
-    newnode->next = head;
-    head = newnode;
+    if (head == NULL)
+        head = newnode;
+    else
+    {
+        head->prev = newnode;
+        newnode->next = head;
+        head = newnode;
+    }
 }
 
 void insert_last(int y)
