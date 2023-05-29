@@ -19,12 +19,17 @@ void insertionSort(int arr[], int n)
 
 int main()
 {
-    int arr[] = {7, 2, 5, 3, 1};
+    // int arr[] = {7, 2, 5, 3, 1};
+    int arr[] = {17, 12, 15, 13, 11};
     int n = sizeof(arr) / sizeof(arr[0]);
-
+    printf("Array: \n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
     insertionSort(arr, n);
 
-    printf("Sorted array: ");
+    printf("\nSorted array: ");
     for (int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
