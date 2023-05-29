@@ -19,10 +19,7 @@ void enqueue()
         front = rear = 0;
         q[rear] = x;
     }
-    else if (front > 0)
-    {
-        max++;
-    }
+
     else
     {
         rear++;
@@ -62,7 +59,7 @@ void display()
     }
 }
 
-void main()
+int main()
 {
     int ch;
     do
@@ -82,4 +79,5 @@ void main()
             break;
         }
     } while (ch < 4);
+    return 0;
 }
