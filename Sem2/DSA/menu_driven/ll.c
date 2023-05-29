@@ -20,7 +20,7 @@ void main()
 {
     int x, ch, y, pos, val, a, p, q, se;
     node *newnode;
-    printf("\n Name:Krishant Chauhan\n course:BCA 2A\n Class Roll no.:-29\n Single Linked List Program\n");
+    printf("\n Name:Krishant Chauhan\n course:MCA 2A\n Class Roll no.:-32\n Single Linked List Program\n");
     while (1)
     {
         printf("\n1.Append\n2.Display\n3.Count Node\n4.Insert At Begning\n5.Insert at End\n6.Insert at Nth Postion\n7.Delete From Begning\n8.Delete From End\n9.Delete at nth Position\n10.Search the Element\n11.Exit\n");
