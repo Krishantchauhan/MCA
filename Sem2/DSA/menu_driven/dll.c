@@ -1,8 +1,3 @@
-// Name:Krishant Chauhan
-// course:BCA 2A
-// Class Roll no.:-29
-// Doubly Linked List Program
-
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct node
@@ -23,7 +18,7 @@ void del(int pos);
 void main()
 {
     int ch, x, a, y, val, pos, po;
-    printf("Name:Krishant Chauhan\ncourse:BCA 2A\nClass Roll no.:-29\nDoubly Linked List Program\n");
+    printf("Name:Krishant Chauhan\ncourse:MCA 2A\nClass Roll no.:-32\nDoubly Linked List Program\n");
     while (1)
     {
         printf("\n1.enqueue\n2.display\n3.Insert at Begning\n4.insert_last\n5.Insert at Nth Position \n6.Delete From Begning\n7.Delete From End\n8.Delete From the nth Position\n9.Exit\nEnter the choice \n");
