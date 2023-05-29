@@ -2,7 +2,7 @@
 
 #define MAX_SIZE 10
 
-void matrixMultiplication(int matrix1[][MAX_SIZE], int matrix2[][MAX_SIZE], int result[][MAX_SIZE], int rows1, int cols1, int rows2, int cols2)
+void multiply(int matrix1[][MAX_SIZE], int matrix2[][MAX_SIZE], int result[][MAX_SIZE], int rows1, int cols1, int rows2, int cols2)
 {
     if (cols1 != rows2)
     {
@@ -24,7 +24,7 @@ void matrixMultiplication(int matrix1[][MAX_SIZE], int matrix2[][MAX_SIZE], int 
     }
 }
 
-void matrixTranspose(int matrix[][MAX_SIZE], int rows, int cols)
+void transpose(int matrix[][MAX_SIZE], int rows, int cols)
 {
     int transpose[MAX_SIZE][MAX_SIZE];
 
@@ -47,7 +47,7 @@ void matrixTranspose(int matrix[][MAX_SIZE], int rows, int cols)
     }
 }
 
-void matrixDiagonalSwap(int matrix[][MAX_SIZE], int size)
+void DiagonalSwap(int matrix[][MAX_SIZE], int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -55,7 +55,6 @@ void matrixDiagonalSwap(int matrix[][MAX_SIZE], int size)
         matrix[i][i] = matrix[i][size - i - 1];
         matrix[i][size - i - 1] = temp;
     }
-
     printf("Matrix after diagonal swap:\n");
     for (int i = 0; i < size; i++)
     {
@@ -110,7 +109,7 @@ int main()
         }
         else
         {
-            matrixMultiplication(matrix1, matrix2, result, rows1, cols1, rows2, cols2);
+            multiply(matrix1, matrix2, result, rows1, cols1, rows2, cols2);
 
             printf("Result of matrix multiplication:\n");
             for (int i = 0; i < rows1; i++)
@@ -136,7 +135,7 @@ int main()
             }
         }
 
-        matrixTranspose(matrix1, rows1, cols1);
+        transpose(matrix1, rows1, cols1);
         break;
 
     case 3:
@@ -151,7 +150,7 @@ int main()
             }
         }
 
-        matrixDiagonalSwap(matrix1, rows1);
+        DiagonalSwap(matrix1, rows1);
         break;
 
     default:
