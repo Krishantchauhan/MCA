@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int calculateHCF(int a, int b);
-int calculateLCM(int a, int b);
-int calculateFactorial(int n);
-int calculateFibonacci(int n);
+int HCF(int a, int b);
+int LCM(int a, int b);
+int fact(int n);
+int fibonacci(int n);
 
 int main()
 {
@@ -30,19 +30,19 @@ int main()
         case 1:
             printf("Enter two numbers to calculate HCF: ");
             scanf("%d %d", &a, &b);
-            result = calculateHCF(a, b);
+            result = HCF(a, b);
             printf("HCF: %d\n", result);
             break;
         case 2:
             printf("Enter two numbers to calculate LCM: ");
             scanf("%d %d", &a, &b);
-            result = calculateLCM(a, b);
+            result = LCM(a, b);
             printf("LCM: %d\n", result);
             break;
         case 3:
             printf("Enter a number to calculate factorial: ");
             scanf("%d", &n);
-            result = calculateFactorial(n);
+            result = fact(n);
             printf("Factorial: %d\n", result);
             break;
         case 4:
@@ -51,7 +51,7 @@ int main()
             printf("Fibonacci sequence: ");
             for (int i = 0; i < n; i++)
             {
-                result = calculateFibonacci(i);
+                result = fibonacci(i);
                 printf("%d ", result);
             }
             printf("\n");
@@ -66,7 +66,7 @@ int main()
     return 0;
 }
 
-int calculateHCF(int a, int b)
+int HCF(int a, int b)
 {
     if (b == 0)
     {
@@ -74,17 +74,17 @@ int calculateHCF(int a, int b)
     }
     else
     {
-        return calculateHCF(b, a % b);
+        return HCF(b, a % b);
     }
 }
 
-int calculateLCM(int a, int b)
+int LCM(int a, int b)
 {
-    int hcf = calculateHCF(a, b);
+    int hcf = HCF(a, b);
     return (a * b) / hcf;
 }
 
-int calculateFactorial(int n)
+int fact(int n)
 {
     if (n == 0 || n == 1)
     {
@@ -92,11 +92,11 @@ int calculateFactorial(int n)
     }
     else
     {
-        return n * calculateFactorial(n - 1);
+        return n * fact(n - 1);
     }
 }
 
-int calculateFibonacci(int n)
+int fibonacci(int n)
 {
     if (n == 0)
     {
@@ -108,6 +108,6 @@ int calculateFibonacci(int n)
     }
     else
     {
-        return calculateFibonacci(n - 1) + calculateFibonacci(n - 2);
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
