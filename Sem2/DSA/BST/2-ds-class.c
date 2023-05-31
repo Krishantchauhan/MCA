@@ -131,28 +131,28 @@ int main()
         case 5:
         {
             count(root, &c);
-            printf("Total NO of Nodes :-%d \n", c);
+            printf("Total NO of Nodes : %d \n", c);
             c = 0;
             break;
         }
         case 6:
         {
             leafNode(root, &leaf);
-            printf("Total NO of Leaf Nodes :-%d \n", leaf);
+            printf("Total NO of Leaf Nodes : %d \n", leaf);
             leaf = 0;
             break;
         }
         case 7:
         {
             onechild(root, &one);
-            printf("Total NO of Nodes with 1 child :-%d \n", one);
+            printf("Total NO of Nodes with 1 child : %d \n", one);
             one = 0;
             break;
         }
         case 8:
         {
             twochild(root, &two);
-            printf("Total NO of Nodes with 2 children :-%d \n", two);
+            printf("Total NO of Nodes with 2 children : %d \n", two);
             two = 0;
             break;
         }
