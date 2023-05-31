@@ -94,14 +94,30 @@ void twochild(node *root, int *ct)
     }
 }
 
+void even(node *root, int *ct)
+{
+    if (root != NULL)
+    {
+        if (root->data % 2 == 0)
+        {
+            *ct = *ct + 1;
+        }
+
+        even(root->left, ct);
+        even(root->right, ct);
+    }
+}
+
 int main()
 {
-    struct node *root = NULL;
-    int c = 0, leaf = 0, one = 0, two = 0;
+    node *root = NULL;
+    int c = 0, leaf = 0, one = 0, two = 0, e1 = 0;
     int n, choice;
+    printf("\n\nKrishant Chauhan MCA 2A Roll no-32 \n");
+    printf("Choice :- \n 1-Insert\n 2-Inorder\n 3-Preorder\n 4-PostOrder\n 5-Count\n 6-Total Leaf Node\n 7-One Child\n 8-Two children\n 9-Even\n 10-Exit \n\n");
     do
     {
-        printf("ENTER CHOICE,1,2,3,4,5,6:");
+        printf("ENTER CHOICE,1,2,3,4,5,6,7,8,9,10:");
         scanf("%d", &choice);
 
         switch (choice)
@@ -158,9 +174,17 @@ int main()
         }
         case 9:
         {
+            even(root, &e1);
+            printf("Total NO of Nodes with 2 children : %d \n", e1);
+            e1 = 0;
+            break;
+        }
+        case 10:
+        {
             return 0;
             break;
         }
         }
-    } while (choice != 9);
+    } while (choice != 10);
+    printf("root : %d", root->data);
 }
