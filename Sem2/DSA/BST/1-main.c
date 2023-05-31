@@ -9,12 +9,14 @@ typedef struct tree
 
 node *insert(node *, int);
 void display(node *);
+void count(node *, int *);
 
 int main()
 {
     struct node *root = NULL;
 
     int n, choice;
+    int c = 0;
     do
     {
         printf("ENTER CHOICE,1,2,3:");
@@ -36,11 +38,18 @@ int main()
         }
         case 3:
         {
+            count(root, &c);
+            printf("Total NO of Nodes :-%d ", c);
+            c = 0;
+            break;
+        }
+        case 4:
+        {
             return 0;
             break;
         }
         }
-    } while (choice != 3);
+    } while (choice != 4);
 }
 
 node *insert(node *root, int x)
@@ -66,4 +75,14 @@ void display(node *root)
     display(root->left);
     printf("%d\n", root->data);
     display(root->right);
+}
+
+void count(node *root, int *ct)
+{
+    if (root != NULL)
+    {
+        *ct = *ct + 1;
+        count(root->left, ct);
+        count(root->right, ct);
+    }
 }
