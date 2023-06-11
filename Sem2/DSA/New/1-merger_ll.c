@@ -67,14 +67,15 @@ int main()
     struct node *nn = NULL;
 
     int ch, x;
+
     printf("\n\nKrishant Chauhan MCA 2A Roll no-32 \n");
+    printf("1. Insert into List 1\n");
+    printf("2. Insert into List 2\n");
+    printf("3. Merge Lists\n");
+    printf("4. Display Merged List\n");
     do
     {
-        printf("1. Insert into List 1\n");
-        printf("2. Insert into List 2\n");
-        printf("3. Merge Lists\n");
-        printf("4. Display Merged List\n");
-        printf("Enter your choice: ");
+        printf("\nEnter your choice: ");
         scanf("%d", &ch);
 
         switch (ch)
