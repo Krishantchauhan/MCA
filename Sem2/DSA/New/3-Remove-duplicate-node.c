@@ -65,13 +65,13 @@ int main()
 {
     struct node *head = NULL;
     int choice, value;
-
+    printf("\n\nKrishant Chauhan MCA 2A Roll no-32 \n");
+    printf("1. Insert a node\n");
+    printf("2. Remove duplicate nodes\n");
+    printf("3. Display \n");
+    printf("4. Exit\n");
     do
     {
-        printf("1. Insert a node\n");
-        printf("2. Remove duplicate nodes\n");
-        printf("3. Display \n");
-        printf("4. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
         switch (choice)
