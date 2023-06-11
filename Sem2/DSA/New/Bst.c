@@ -156,14 +156,14 @@ int main()
         case 5:
         {
             twoChildNode(root, &twoChild);
-            printf("Total Number of Nodes with 2 children: %d\n", twoChild);
+            printf("Total No of Nodes with 2 children: %d\n", twoChild);
             twoChild = 0;
             break;
         }
         case 6:
         {
             int leftCount = countlft(root);
-            printf("Total Number of Nodes on the Left Side %d\n", leftCount);
+            printf("Total No of Nodes on the Left Side %d\n", leftCount);
             break;
         }
         case 7:
