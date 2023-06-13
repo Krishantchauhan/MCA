@@ -11,7 +11,7 @@ public class concatenateStrings {
 
     public static void main(String[] args) {
         String input1 = "Kris";
-        String input2 = "iya";
+        String input2 = "hant";
 
         String result = concatenate(input1, input2);
 
