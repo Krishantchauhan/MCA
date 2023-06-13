@@ -12,7 +12,6 @@ struct node *append(struct node *head, int x)
     struct node *nn = (struct node *)malloc(sizeof(struct node));
     nn->data = x;
     nn->next = NULL;
-
     if (head == NULL)
     {
         return nn;
