@@ -40,9 +40,9 @@ class cyclic {
 
         int prod = 0;
         for (int i = 0; i < 5; i++) {
-        int rem = num % 10;
-        prod = prod + rem * rem;
-        num /= 10;
+            int rem = num % 10;
+            prod = prod + rem * rem;
+            num /= 10;
         }
 
         System.out.println("The Sum is =" + prod);

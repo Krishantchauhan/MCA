@@ -62,7 +62,7 @@ void sortCharacters()
 int main()
 {
     int arr[100];
-    int len=0;
+    int len = 0;
     int choice;
     do
     {
@@ -75,8 +75,8 @@ int main()
 
         switch (choice)
         {
-            case 1:
-                scanf("%d",&arr[len++]);
+        case 1:
+            scanf("%d", &arr[len++]);
         case 2:
             sortCharacters();
             break;

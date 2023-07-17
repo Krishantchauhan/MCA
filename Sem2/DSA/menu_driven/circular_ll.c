@@ -20,23 +20,17 @@ void del_end();
 void del(int count, int pos);
 void search(int se);
 
-void rev(node *current, node *prev)
+void reverse(node *curr, node *prev)
 {
-    if (current == NULL)
-        return;
-
-    if (current->next == head)
+    if (curr->next == head)
     {
-        current->next = prev;
-        head = current;
+        curr->next = prev;
+        head = curr;
         return;
     }
-
-    node *next = current->next;
-    current->next = prev;
-    rev(next, current);
+    reverse(curr->next, curr);
+    curr->next = prev;
 }
-
 
 int main()
 {
@@ -98,7 +92,7 @@ int main()
         case 11:
             exit(1);
         case 12:
-            rev(head, NULL);
+            reverse(head, NULL);
         default:
             printf("Enter a correct option.\n");
         }

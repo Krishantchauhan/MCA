@@ -16,6 +16,18 @@ typedef struct node
     struct node *next;
 } node;
 node *head;
+
+void reverse(node *curr, node *prev)
+{
+    if (curr == NULL)
+    {
+        head = prev;
+        return;
+    }
+    reverse(curr->next, curr);
+    curr->next = prev;
+}
+
 void main()
 {
     int x, ch, y, pos, val, a, p, q, se;
@@ -73,6 +85,8 @@ void main()
             break;
         case 11:
             exit(1);
+        case 12:
+            reverse(head, NULL);
         default:
             printf("Enter correct Option\n");
         }

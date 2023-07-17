@@ -4,14 +4,9 @@ class fact {
     public static void main(String[] args) {
         int f = 1;
         int n = Integer.parseInt(args[0]);
-        // while (n > 0) {
-        // f = f * n;
-        // n--;
-        // }
-        int i = 1;
-        while (i <= n) {
-            f = f * i;
-            i++;
+        while (n > 0) {
+        f = f * n;
+        n--;
         }
 
         System.out.println("factorial: " + f);
