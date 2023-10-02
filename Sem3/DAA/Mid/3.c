@@ -67,7 +67,7 @@ int main()
         int right = R(arr, n, key, &ct);
 
         if (left != -1)
-            printf("Present %d\n", right - left + 1);
+            printf("%d is %d times\n",key, right - left + 1);
         else
             printf("Not Present\n");
         a--;
