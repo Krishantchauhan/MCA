@@ -41,7 +41,7 @@ int main()
                 if (bs != -1)
                 {
                     flag = 1;
-                    printf("%d %d %d", i + 1, j + 1, bs + 1);
+                    printf("Seq:- %d ,%d ,%d", i + 1, j + 1, bs + 1);
                     break;
                 }
                 else
@@ -51,7 +51,7 @@ int main()
                 break;
         }
         if (!flag)
-            printf("no");
+            printf("No sequence found\n");
         a--;
     }
 
