@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void selection(int arr[], int n, int *cmp, int *sft)
+void in(int arr[], int n, int *cmp, int *sft)
 {
 
     for (int i = 1; i < n; i++)
@@ -35,7 +35,7 @@ int main()
 
         int cmp = 0, sft = 0;
 
-        selection(arr, n, &cmp, &sft);
+        in(arr, n, &cmp, &sft);
 
         for (int i = 0; i < n; i++)
             printf("%d ", arr[i]);
