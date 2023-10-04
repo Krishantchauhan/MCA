@@ -18,6 +18,7 @@ int main()
         int pos = 0;
         for (int i = 0; i < n; i++)
         {
+            
             if (key == arr[i])
             {
                 flag = 1;
