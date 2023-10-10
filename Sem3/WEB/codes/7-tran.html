@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animation</title>
+    <style>
+      .animated {
+        width: 550px;
+        height: 550px;
+        animation-name: sample;
+        animation-duration: 10s;
+        animation-fill-mode: forwards;
+      }
+      @keyframes sample {
+        0% {
+          background-color: red;
+        }
+        50% {
+          background-color: green;
+        }
+        100% {
+          background-color: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animated"></div>
+  </body>
+</html>
