@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drag&Drop Image</title>
+    <style>
+      .divi {
+        border: 1px solid black;
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+      }
+      #img1{
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="divi" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="b2.jpg" id="img1" draggable="true" ondragstart="drag(event)" width="200" height="200" alt="Draggable Image" />
+    </div>
+    <div class="divi" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div class="divi" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+    <script>
+      function allowDrop(event) {
+        event.preventDefault();
+      }
+
+      function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+      }
+
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text");
+        var draggedImage = document.getElementById(data);
+        event.target.appendChild(draggedImage);
+      }
+    </script>
+  </body>
+</html>
