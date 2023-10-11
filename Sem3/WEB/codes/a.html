@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <style>
+      .divi {
+        width: 250px;
+        height: 250px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="divi"
+      id="d1"
+      ondrop="drop(event)"
+      ondragover="allowdrop(event)">
+      <img
+        id="img1"
+        draggable="true"
+        ondragstart="drag(event)"
+        width="200"
+        height="200"
+        src="b2.jpg" />
+    </div>
+    <div
+      class="divi"
+      id="d2"
+      ondrop="drop(event)"
+      ondragover="allowdrop(event)"></div>
+    <div
+      class="divi"
+      id="d3"
+      ondrop="drop(event)"
+      ondragover="allowdrop(event)"></div>
+    <script>
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text");
+        var dragImg = document.getElementById(data);
+        event.target.appendChild(dragImg);
+      }
+
+      function allowdrop(event) {
+        event.preventDefault();
+      }
+
+      function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+      }
+    </script>
+  </body>
+</html>
