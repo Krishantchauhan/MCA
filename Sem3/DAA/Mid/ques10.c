@@ -17,7 +17,9 @@ void main()
         }
         int num;
         scanf("%d",&num);
+
         int countSort[max+1]={0};
+
         for(int j=0;j<size;j++)
             countSort[arr[j]]++;
 
@@ -29,6 +31,6 @@ void main()
                 printf("%d\n",j);
                 break;
             }
-        }
+        }  
     }
 }
