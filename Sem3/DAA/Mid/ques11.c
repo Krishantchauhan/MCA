@@ -13,6 +13,7 @@ void main()
         {
             scanf(" %c",&arr[j]);
         }
+        
         int alph[26]={0};
         for(int j=0;j<size;j++)
         {
