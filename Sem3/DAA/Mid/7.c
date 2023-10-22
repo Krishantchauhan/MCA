@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-void merge(int arr[], int left, int mid, int right) {
+void merge(int arr[], int left, int mid, int right)
+{
     int i, j, k;
     int n1 = mid - left + 1;
     int n2 = right - mid;
@@ -12,46 +13,58 @@ void merge(int arr[], int left, int mid, int right) {
     i = 0;
     j = 0;
     k = left;
-    while (i < n1 && j < n2) {
-        if (L[i] <= R[j]) {
+    while (i < n1 && j < n2)
+    {
+        if (L[i] <= R[j])
+        {
             arr[k] = L[i];
             i++;
-        } else {
+        }
+        else
+        {
             arr[k] = R[j];
             j++;
         }
         k++;
     }
-    while (i < n1) {
+    while (i < n1)
+    {
         arr[k] = L[i];
         i++;
         k++;
     }
-    while (j < n2) {
+    while (j < n2)
+    {
         arr[k] = R[j];
         j++;
         k++;
     }
 }
-void mergeSort(int arr[], int left, int right) {
-    if (left < right) {
+void mergeSort(int arr[], int left, int right)
+{
+    if (left < right)
+    {
         int mid = left + (right - left) / 2;
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
         merge(arr, left, mid, right);
     }
 }
-int hasDuplicates(int arr[], int n) {
-    for (int i = 0; i < n - 1; i++) {
+int hasDuplicates(int arr[], int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
         if (arr[i] == arr[i + 1])
-            return 1; 
+            return 1;
     }
-    return 0; 
+    return 0;
 }
-int main() {
+int main()
+{
     int a;
-    scanf("%d", &a);w
-    while (a--) {
+    scanf("%d", &a);
+    w while (a--)
+    {
         int n;
         scanf("%d", &n);
         int arr[n];
